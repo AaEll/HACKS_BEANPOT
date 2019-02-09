@@ -52,9 +52,9 @@ class myPdb(pdb.Pdb):
                 break
             except KeyboardInterrupt:
                 self.message('--KeyboardInterrupt--')
-    def do_play(self, line):
-        self.cmdqueue  = infinite_array('n\r\n')
     def do_play2(self, line):
+        self.cmdqueue  = infinite_array('n\r\n')
+    def do_play(self, line):
         self.cmdqueue  = infinite_array('s\r\n')
 
 
