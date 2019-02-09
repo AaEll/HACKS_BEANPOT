@@ -1,6 +1,6 @@
-import mypdb
+import musicalpdb
 
-mypdb.my_set_trace
+musicalpdb.my_set_trace
 
 x = 0
 def my_func():
@@ -11,6 +11,7 @@ def my_func():
 for i in range(1,4):
     my_func()
 
+y = 0
 while (x<y):
     y = x+2
     my_func()
