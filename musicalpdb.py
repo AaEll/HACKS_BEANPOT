@@ -7,15 +7,16 @@ import time
 
 
 data ={}
-wav_path = 'C:\\Users\\musicalpdb\\resources\\music\\44mozarts15b.wav'#44mozarts15b.wav' #NWA.wav
+length_of_partition = 90000
+wav_path = 'C:\\Users\\musicalpdb\\resources\\music\\LuckyYou.wav'#44mozarts15b.wav' #NWA.wav
 wave_read = wave.open(wav_path, 'rb')
 num_channels = wave_read.getnchannels()
 bytes_per_sample = wave_read.getsampwidth()
 sample_rate = wave_read.getframerate()
 no_frames = wave_read.getnframes()
-no_partitions = no_frames//70000
+no_partitions = no_frames//length_of_partition
 for i in range(no_partitions):
-	data[i] = wave_read.readframes(70000)
+	data[i] = wave_read.readframes(length_of_partition)
 
 class infinite_array():
     def __init__(self,inp):

@@ -1,5 +1,5 @@
 import musicalpdb
-
+from functools import reduce
 musicalpdb.my_set_trace
 
 x = 0
@@ -16,6 +16,11 @@ while (x<y):
     y = x+2
     my_func()
     y = y%11
+
+z = [1,'2',3,4,5]
+w = reduce(lambda x,y : x+y, z)
+for i in w :
+    print(i)
 
 def assertIsValidObjectParameterStatementForCurrentString(myStr):
     for i in range(len(myStr)):
