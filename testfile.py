@@ -1,6 +1,6 @@
 import musicalpdb
 from functools import reduce
-musicalpdb.my_set_trace
+musicalpdb.my_set_trace()
 
 x = 0
 def my_func():
@@ -28,14 +28,14 @@ def assertIsValidObjectParameterStatementForCurrentString(myStr):
             print("probably a vowel, but checking real quick")
             if(isItReallyAVowel(myStr[i])):
                 return True
-    
+
     print("no vowels found! this is a FAKE WORD.")
     return False
 
 def isItReallyAVowel(myChar):
     if(myChar in "aeiou"):
         return True
-    
+
     return False
 
 assertIsValidObjectParameterStatementForCurrentString('1241231231231asdfasdfasdf')
