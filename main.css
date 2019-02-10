@@ -25,6 +25,20 @@ html, body{
   position: relative;
 }
 
+textarea {
+    border-radius: 20px;
+    width: 45%;
+}
+
+#code {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  border-left: 10px;
+
+}
+
 *{
   box-sizing: border-box;
   transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
@@ -34,19 +48,29 @@ html, body{
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
+
 
 audio {
   position: fixed;
   left: 10px;
   bottom: -10px;
-  width: calc(100% - 20px);
+  width: calc(50% - 20px);
 }
 
 audio.active{
   bottom: 10px;
+}
+
+#python{
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
 }
 
 #thefile{
@@ -61,12 +85,12 @@ audio.active{
 label.file{
   display: inline-block;
   position: absolute;
-  left: 50%;
+  left: 25%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   padding: 1rem 2rem;
   border-radius: 4px;
-  
+
   background: var(--paperColor);
   color: var(--textColor);
   font-size: 1.25em;
@@ -88,6 +112,44 @@ label.file:active{
 }
 
 label.file.normal{
+  transform: translate3d(10%, 50%, 0);
+  padding: 0.2rem 2rem;
+  font-size: 1rem;
+  top: 0;
+  left: 0;
+}
+
+
+label.file2{
+  display: inline-block;
+  position: relative;
+  left: 120%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+
+  background: var(--paperColor);
+  color: var(--textColor);
+  font-size: 1.25em;
+  font-weight: 700;
+  box-shadow: 0 20px 60px var(--shadowColorFaint);
+
+  cursor: pointer;
+}
+
+
+label.file2:hover{
+    background: var(--paperColorDark);
+    transform: translate3d(-50%, -55%, 0);
+}
+
+label.file2:active{
+    background: var(--paperColorDark);
+    transform: translate3d(-50%, -45%, 0);
+}
+
+label.file2.normal{
   transform: translate3d(10%, 50%, 0);
   padding: 0.2rem 2rem;
   font-size: 1rem;
