@@ -63,18 +63,10 @@ class myPdb(pdb.Pdb):
     def do_play(self, line):
         self.cmdqueue  = infinite_array('s\r\n')
 
-async def sendToFrontEnd(wav_path):
-    async with websockets.connect(
-            'ws://localhost:8765') as websocket:
-        await websocket.send(wav_path)
-        print(f"> {wav_path}")
-
 def my_set_trace(*, wav_path='music/alex-skrindo-miza-thinkin.wav', length_of_partition=80000, header=None):
     mypdb = myPdb(skip = ['musicalpdb','importlib*'])
 
     mypdb.inpWav(wav_path, length_of_partition)
-
-    sendToFrontEnd(wav_path)
 
     if header is not None:
         mypdb.message(header)
