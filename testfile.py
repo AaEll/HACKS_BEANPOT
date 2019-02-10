@@ -1,6 +1,7 @@
 import musicalpdb
 from functools import reduce
-musicalpdb.my_set_trace()
+wav_path = 'C:\\Users\\HACKATHON\\music\\Regular.wav'
+musicalpdb.my_set_trace(wav_path = wav_path)
 
 x = 0
 def my_func():
